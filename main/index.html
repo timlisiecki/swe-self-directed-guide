@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-behavior">
+		<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<script>document.getElementsByTagName("html")[0].className += " js";</script>
+				<link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+				<!-- browsers not supporting CSS variables -->
+				<script>
+						if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+				</script>
+				<title>Self-Directed Guide to Software Engineering</title>
+		</head>
+		<body>
+				
+				<div class="padding-component hide@md no-js:is-hidden">
+					<button class="btn btn--primary" aria-controls="sidebar">Show sidebar</button>
+				</div>
+
+				<progress aria-hidden="true" class="reset reading-progressbar reading-progressbar--is-hidden js-reading-progressbar" max="100" value="0">
+				  <div class="reading-progressbar__fallback js-reading-progressbar__fallback"></div>
+				</progress>
+
+				<div class="flex@md">
+					<aside class="sidebar sidebar--static@md js-sidebar" data-static-class="sidebar--sticky-on-desktop z-index-1 flex-grow border-right" id="sidebar" aria-labelledby="sidebarTitle">
+						<div class="sidebar__panel">
+							<header class="sidebar__header z-index-2">
+								<h1 class="text-md text-truncate" id="sidebarTitle">Self-Directed Guide to Software Engineering</h1>
+					
+								<button class="reset sidebar__close-btn js-sidebar__close-btn js-tab-focus">
+									<svg class="icon" viewBox="0 0 16 16"><title>Close panel</title><g stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
+								</button>
+
+							</header>
+							
+							<div class="position-relative z-index-1">
+								<!-- start sidebar content -->
+								<nav class="sidenav js-sidenav">
+									<div class="sidenav__label">Self-Directed Guide to Software Engineering</div>
+									
+									<ul class="sidenav__list">
+										<li class="sidenav__item sidenav__item--expanded">
+											<a href="#nav-item-0" class="sidenav__link" aria-current="page">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M6,0H1C0.4,0,0,0.4,0,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1V1C7,0.4,6.6,0,6,0z M5,5H2V2h3V5z"></path><path d="M15,0h-5C9.4,0,9,0.4,9,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1V1C16,0.4,15.6,0,15,0z M14,5h-3V2h3V5z"></path><path d="M6,9H1c-0.6,0-1,0.4-1,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1v-5C7,9.4,6.6,9,6,9z M5,14H2v-3h3V14z"></path><path d="M15,9h-5c-0.6,0-1,0.4-1,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1v-5C16,9.4,15.6,9,15,9z M14,14h-3v-3h3V14z"></path></g></svg>
+												<span class="sidenav__text">0. Introduction</span>
+
+												<!-- <span class="sidenav__counter">12 <i class="sr-only">notifications</i></span> -->
+											</a>
+
+											<button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+												<svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+											</button>
+
+											<ul class="sidenav__list">
+												<li class="sidenav__item">
+													<a href="#nav-item-0-a" class="sidenav__link">
+														<span class="sidenav__text">About This Guide</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-0-b" class="sidenav__link">
+														<span class="sidenav__text">Tips and Advice</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-0-c" class="sidenav__link">
+														<span class="sidenav__text">General Resources</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-0-d" class="sidenav__link">
+														<span class="sidenav__text">Courses</span>
+													</a>
+												</li>
+											</ul>
+
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#nav-item-1" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M14,7H2v7c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V7z"></path><rect y="1" width="16" height="4"></rect></g></svg>
+												<span class="sidenav__text">1. Fundamentals</span>
+											</a>
+
+											<button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+												<svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+											</button>
+
+											<ul class="sidenav__list">
+												<li class="sidenav__item">
+													<a href="#nav-item-1-a" class="sidenav__link">
+														<span class="sidenav__text">HTML, CSS, & JavaScript</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-1-b" class="sidenav__link">
+														<span class="sidenav__text">Command Line Basics</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-1-c" class="sidenav__link">
+														<span class="sidenav__text">Git and Github</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-1-d" class="sidenav__link">
+														<span class="sidenav__text">Troubleshooting & Debugging</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#nav-item-2" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M14,7H2v7c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V7z"></path><rect y="1" width="16" height="4"></rect></g></svg>
+												<span class="sidenav__text">2. Front End Development</span>
+											</a>
+
+											<button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+												<svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+											</button>
+
+											<ul class="sidenav__list">
+
+												<li class="sidenav__item">
+													<a href="#nav-item-2-a" class="sidenav__link">
+														<span class="sidenav__text">Thinking Algorithmically</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-2-b" class="sidenav__link">
+														<span class="sidenav__text">Engineering Techniques</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-2-c" class="sidenav__link">
+														<span class="sidenav__text">Intermediate HTML, CSS, & JavaScript</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#nav-item-3" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M14,7H2v7c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V7z"></path><rect y="1" width="16" height="4"></rect></g></svg>
+												<span class="sidenav__text">3. Full Stack Development</span>
+											</a>
+
+											<button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+												<svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+											</button>
+
+											<ul class="sidenav__list">
+												<li class="sidenav__item">
+													<a href="#nav-item-3-a" class="sidenav__link">
+														<span class="sidenav__text">Algorithms</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-3-b" class="sidenav__link">
+														<span class="sidenav__text">Advance JavaScript/Engineering Concepts</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-3-c" class="sidenav__link">
+														<span class="sidenav__text">Node.js & Express.js</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-3-d" class="sidenav__link">
+														<span class="sidenav__text">Database Interaction</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-3-e" class="sidenav__link">
+														<span class="sidenav__text">Authentication and Authorization</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-3-f" class="sidenav__link">
+														<span class="sidenav__text">Agile Development</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-3-g" class="sidenav__link">
+														<span class="sidenav__text">Open Sauce Code</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-3-h" class="sidenav__link">
+														<span class="sidenav__text">Documentation Best Practices</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#nav-item-4" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M14,7H2v7c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V7z"></path><rect y="1" width="16" height="4"></rect></g></svg>
+												<span class="sidenav__text">4. Front End Frameworks</span>
+											</a>
+
+											<button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+												<svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+											</button>
+
+											<ul class="sidenav__list">
+												<li class="sidenav__item">
+													<a href="#nav-item-4-a" class="sidenav__link">
+														<span class="sidenav__text">Intro to Frameworks</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-4-b" class="sidenav__link">
+														<span class="sidenav__text">Package Managers and Build Tools</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-4-c" class="sidenav__link">
+														<span class="sidenav__text">Data Structures & Design Patterns</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-4-d" class="sidenav__link">
+														<span class="sidenav__text">Front End Patterns</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-4-e" class="sidenav__link">
+														<span class="sidenav__text">Typescript</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#nav-item-5" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M14,7H2v7c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V7z"></path><rect y="1" width="16" height="4"></rect></g></svg>
+												<span class="sidenav__text">5. API's and Back End Development</span>
+											</a>
+
+											<button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+												<svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+											</button>
+
+											<ul class="sidenav__list">
+												<li class="sidenav__item">
+													<a href="#nav-item-5-e" class="sidenav__link">
+														<span class="sidenav__text">Advanced Data Strutures</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-5-a" class="sidenav__link">
+														<span class="sidenav__text">Back End Libraries and Frameworks</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-5-b" class="sidenav__link">
+														<span class="sidenav__text">REST APIs</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-5-c" class="sidenav__link">
+														<span class="sidenav__text">Git Workflows</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-5-d" class="sidenav__link">
+														<span class="sidenav__text">Advanced Debugging, Testing, and Documentation Techniques</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#nav-item-6" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M14,7H2v7c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V7z"></path><rect y="1" width="16" height="4"></rect></g></svg>
+												<span class="sidenav__text">6. Extra Learning</span>
+											</a>
+
+											<button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+												<svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+											</button>
+
+											<ul class="sidenav__list">
+												<li class="sidenav__item">
+													<a href="#nav-item-6-a" class="sidenav__link">
+														<span class="sidenav__text">GraphQL</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-6-b" class="sidenav__link">
+														<span class="sidenav__text">Deno.js</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-6-c" class="sidenav__link">
+														<span class="sidenav__text">Docker & Kubernetes</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-6-d" class="sidenav__link">
+														<span class="sidenav__text">AWS</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-6-e" class="sidenav__link">
+														<span class="sidenav__text">Advanced Accessibility</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-6-f" class="sidenav__link">
+														<span class="sidenav__text">Microservices</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-6-g" class="sidenav__link">
+														<span class="sidenav__text">Data Visualization</span>
+													</a>
+												</li>
+
+												<li class="sidenav__item">
+													<a href="#nav-item-6-h" class="sidenav__link">
+														<span class="sidenav__text">Learn Another Language</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<div class="sidenav__divider" role="presentation"></div>
+
+									<div class="sidenav__label">Other</div>
+
+									<ul class="sidenav__list">
+										<li class="sidenav__item">
+											<a href="#0" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><circle cx="6" cy="8" r="2"></circle><path d="M10,2H6C2.7,2,0,4.7,0,8s2.7,6,6,6h4c3.3,0,6-2.7,6-6S13.3,2,10,2z M10,12H6c-2.2,0-4-1.8-4-4s1.8-4,4-4h4 c2.2,0,4,1.8,4,4S12.2,12,10,12z"></path></g></svg>
+												<span class="sidenav__text">Contribute to this Project!</span>
+											</a>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#0" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><circle cx="6" cy="8" r="2"></circle><path d="M10,2H6C2.7,2,0,4.7,0,8s2.7,6,6,6h4c3.3,0,6-2.7,6-6S13.3,2,10,2z M10,12H6c-2.2,0-4-1.8-4-4s1.8-4,4-4h4 c2.2,0,4,1.8,4,4S12.2,12,10,12z"></path></g></svg>
+												<span class="sidenav__text">View My Github</span>
+											</a>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#0" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><circle cx="6" cy="8" r="2"></circle><path d="M10,2H6C2.7,2,0,4.7,0,8s2.7,6,6,6h4c3.3,0,6-2.7,6-6S13.3,2,10,2z M10,12H6c-2.2,0-4-1.8-4-4s1.8-4,4-4h4 c2.2,0,4,1.8,4,4S12.2,12,10,12z"></path></g></svg>
+												<span class="sidenav__text">View My Website!</span>
+											</a>
+										</li>
+
+										<li class="sidenav__item">
+											<a href="#0" class="sidenav__link">
+												<svg class="icon sidenav__icon" aria-hidden="true" viewBox="0 0 16 16"><g><path d="M12.25,8.231C11.163,9.323,9.659,10,8,10S4.837,9.323,3.75,8.231C1.5,9.646,0,12.145,0,15v1h16 v-1C16,12.145,14.5,9.646,12.25,8.231z"></path><circle cx="8" cy="4" r="4"></circle></g></svg>
+												<span class="sidenav__text">Connect on LinkedIn!</span>
+											</a>
+										</li>
+									</ul>
+									<div class="nav-footer margin-sm">
+										<p class="text-center padding-y-xxs">Copyright © 2020 Tim Lisiecki.</p>
+									</div>
+								</nav>
+								<!-- end sidebar content -->
+							</div>
+						</div>
+					</aside>
+					
+					<main class="position-relative z-index-1">
+						<!-- start main content -->
+
+						<div>
+						  <article class="text-component js-reading-content">
+
+						  	<section class="padding-y-xl position-relative z-index-1">
+						  	  <div class="container max-width-adaptive-sm position-relative z-index-2">
+						  	    <div class="text-sm opacity-60% margin-bottom-xxs">This is a Label</div>
+
+						  	    <div class="text-component margin-bottom-sm">
+						  	      <h1>Self-Directed Guide to Software Engineering</h1>
+						  	      <p>Start learning software engineering on your own! Begin by learning web development fundamentals and move on to more advanced software engineering topics. This guide is a curated collection of helpful resources and online courses from different mediums covering various topics needed to become a successful software engineer.</p>
+						  	    </div>
+
+						  	    <p class="text-center">👇 Scroll to Get Started!</p>
+						  	  </div>
+
+						  	  <figure class="bg-decoration z-index-1" aria-hidden="true">
+						  	    <svg class="bg-decoration__svg color-contrast-higher opacity-40%" viewBox="0 0 1920 450" fill="none">
+						  	      <rect opacity="0.5" x="610.131" y="-440" width="128" height="836.003" transform="rotate(46.8712 610.131 -440)"
+						  	        fill="url(#bg-decoration-v1-fx-5-linear-1)" />
+						  	      <rect opacity="0.5" x="1899.13" y="-262" width="128" height="836.003" transform="rotate(46.8712 1899.13 -262)"
+						  	        fill="url(#bg-decoration-v1-fx-5-linear-2)" />
+						  	      <rect opacity="0.5" x="2076.13" y="-321" width="128" height="836.003" transform="rotate(46.8712 2076.13 -321)"
+						  	        fill="url(#bg-decoration-v1-fx-5-linear-3)" />
+						  	      <rect opacity="0.5" x="1294.5" y="40.3308" width="128" height="836.003"
+						  	        transform="rotate(-132.518 1294.5 40.3308)" fill="url(#bg-decoration-v1-fx-5-linear-4)" />
+						  	      <rect opacity="0.5" x="1866.13" y="-453" width="128" height="836.003" transform="rotate(46.8712 1866.13 -453)"
+						  	        fill="url(#bg-decoration-v1-fx-5-linear-5)" />
+						  	      <rect opacity="0.5" x="800.131" y="-418" width="128" height="836.003" transform="rotate(46.8712 800.131 -418)"
+						  	        fill="url(#bg-decoration-v1-fx-5-linear-5)" />
+						  	      <rect opacity="0.5" x="436.448" y="-251" width="76.1734" height="340.424" transform="rotate(46.8712 436.448 -251)"
+						  	        fill="url(#bg-decoration-v1-fx-5-linear-7)" />
+						  	      <defs>
+						  	        <linearGradient id="bg-decoration-v1-fx-5-linear-1" x1="674.131" y1="-440" x2="674.131" y2="396.003"
+						  	          gradientUnits="userSpaceOnUse">
+						  	          <stop stop-color="currentColor" />
+						  	          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+						  	        </linearGradient>
+						  	        <linearGradient id="bg-decoration-v1-fx-5-linear-2" x1="1963.13" y1="-262" x2="1963.13" y2="574.003"
+						  	          gradientUnits="userSpaceOnUse">
+						  	          <stop stop-color="currentColor" />
+						  	          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+						  	        </linearGradient>
+						  	        <linearGradient id="bg-decoration-v1-fx-5-linear-3" x1="2140.13" y1="-321" x2="2140.13" y2="515.003"
+						  	          gradientUnits="userSpaceOnUse">
+						  	          <stop stop-color="currentColor" />
+						  	          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+						  	        </linearGradient>
+						  	        <linearGradient id="bg-decoration-v1-fx-5-linear-4" x1="1358.5" y1="40.3308" x2="1358.5" y2="876.334"
+						  	          gradientUnits="userSpaceOnUse">
+						  	          <stop stop-color="currentColor" />
+						  	          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+						  	        </linearGradient>
+						  	        <linearGradient id="bg-decoration-v1-fx-5-linear-5" x1="1930.13" y1="-453" x2="1930.13" y2="383.003"
+						  	          gradientUnits="userSpaceOnUse">
+						  	          <stop stop-color="currentColor" />
+						  	          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+						  	        </linearGradient>
+						  	        <linearGradient id="bg-decoration-v1-fx-5-linear-5" x1="864.131" y1="-418" x2="864.131" y2="418.003"
+						  	          gradientUnits="userSpaceOnUse">
+						  	          <stop stop-color="currentColor" />
+						  	          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+						  	        </linearGradient>
+						  	        <linearGradient id="bg-decoration-v1-fx-5-linear-7" x1="474.534" y1="-251" x2="474.534" y2="89.4236"
+						  	          gradientUnits="userSpaceOnUse">
+						  	          <stop stop-color="currentColor" stop-opacity="0" />
+						  	          <stop offset="1" stop-color="currentColor" />
+						  	        </linearGradient>
+						  	      </defs>
+						  	    </svg>
+						  	  </figure>
+						  	</section>
+
+						  	<section class="padding-y-md">
+						  		<div class="container max-width-adaptive-sm">
+						  			<div class="text-component line-height-lg v-space-md">
+						  				<h2 id="nav-item-0" class="font-semibold text-underline">Introduction</h2>
+						  				
+						  				<h3 id="nav-item-0-a">About this Guide</h3>
+						  				<p>The purpose of this guide is to introduce the topics needed for teaching yourself software engineering, specifically full stack JavaScript engineering. There are many ways to learn software engineering other than pursuing the traditional Computer Science degree. One of the great things about the internet is the endless amount of information you can find on anything.</p>
+						  				<p>The main reason I am putting together this guide is so that I use it while teaching myself full stack JavaScript engineering. However, there are many aspiring developers and engineers in the same position as me, so I wanted to make something that others could not only use, but also expand and/or make their own. This guide is open-sourced on Github for others to contribute to, or to clone to customize for thier own use. In my few years teaching myself web development, I have found it difficult to find the important information needed to teach myself. In other words, "you don't know what you don't know". After reviewing many software engineering bootcamps and CS degree programs, I noticed a lot of similarities between them, specifically the gaps of information I was lacking in self-directed learning. Another reason I put this together is that there is a lower barrier to entry in software engineering with a trend of self-taught programmers on the rise (<a href="https://medium.com/better-programming/software-developer-trends-of-2020-and-beyond-d1b955bc46b8" target="_blank">see #8 in this article</a>).</p>
+						  				<p>Before you get started, it is important to note that this guide is not for everyone. This guide is geared towards the aspiring developer/engineer that has the capability, discipline, and (most importantly) the motivation to teach themselves software engineering. There are other ways to learning software engineering from expert instructors, like enrolling in bootcamps or taking the traditional route to earning a Computer Science degree. So if you need that type of direction for you to succeed in learning, this guide may not be for you, unless you want to use it as a supplement to a bootcamp or CS degree program. However, enrolling in a bootcamp or CS program can cost thousands of dollars. This guide is an alternative for those who seek to save money (not all courses linked in this guide are free, but they are very affordable with discounts applied) while also covering the topics needed to be a successful software engineer.</p>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-0-b">Tips and Advice</h3>
+						  				<p>Before jumping into the guide, I wanted to share some tips and advice I wish I had when I first started my self-directed learning of web development... advice that I will also use when teaching myself software development. This can actually apply to self-directed learning in general in most cases.</p>
+						  				<p>My two most important pieces of advice is focused on your <strong>mindset</strong> and <strong>approach</strong> to self-directed learning. Looking back, I had the wrong mindset and approach when I first started learning web development, and it definitely effected how efficiently I learned along the way. I eventually was able to get a job as a web developer, but it took longer than I would have liked.</p>
+
+						  				<h4>Mindset</h4>
+						  				<p>A lot of bootcamps and online courses (along with some that I suggest in this guide) may state that you will be able to get a job after completing their course. When I first started learning web development, I took it almost as a guarentee. My end goal was to get a job as a web developer, and at the time, was laser-focused on that end goal. The problem with this mindset was that I was too focused on the end result, and when that happens, I started to take shortcuts while taking the courses. Taking shortcuts worked in moving through the topics quickly, coding along with the videos, but I did not get the deep understanding of the topics that I should have. I was in a rotating door of false confidence from breezing through the course to imposter syndrome (that every developer gets) when trying to attempt coding on my own.</p>
+						  				<p><strong>The right mindset is having the end goal of becoming a successful developer or engineer, but your focus should be on getting a deep understanding of at least the fundamentals, if not all the topics, along the way to achieving that goal.</strong> As <a href="https://medium.com/the-post-grad-survival-guide/if-you-want-to-achieve-your-goals-10x-faster-you-need-to-stop-following-routines-cd3253e1908d" target="_blank">this article</a> states, "Ordinary People Focus on the Outcome. Extraordinary People Focus On the Process".</p>
+
+						  				<h4>Approach</h4>
+						  				<p>Another important piece of advice is to have the right approach to self-directed learning. When I first started learning coding, I believed finishing one online course would land me a developer job. I would rush through a course, and immediately start applying to as many jobs as I could. The projects on my Githib were mostly code-alongs from the videos of the online courses. It's not surprising that I did not hear back from the jobs I applied to, and with the ones I did hear back from, I did not make it far in the interview process. You don't learn much by coding along with someone else. You learn by trying to do it yourself, which involves some struggling along the way, which is part of the learning process. I also recommend taking multiple courses, even if each course covers the same topics. This helps reinforce the fundamentals, and also introduces you to new ways and techniques in coding since each developer codes differently. It also allows you to work on different projects to build on your skills.</p>
+						  				<p><strong>The right approach involves consistently putting in the work to practice and understand the topics that you have learned. Develop a routine or system that works for you and stick to it. Also, no single course is going to teach you enough to land a developer job, however taking multiple courses will give you the chance to learn the fundamentals in different ways.</strong></p>
+
+						  				<h4>Bringing It Together</h4>
+						  				<p>Having the right mindset and approach will be key in self-directed learning. Since I have realized this, I completely changed how I teach myself new things, not only in software engineering. With the right mindset and approach, I have started to get into a routine (as of writing this, it has been a few months into COVID 19 pandemic, so there's more time to focus on learning). I start my weekday mornings reading a Javascript-related book (see below for a list of books) from ~ 8am - 9am; I then start my day at my full-time job (luckily doing web development, so I am able to apply things I learn in real life) from 9am-5pm; I end my week days with about 1-2 hours of continuing courses, reading resources, and coding. I also spend a few hours each weekend continuing courses, reading resources, and coding. I devote about 15-20 hours to learning each week in addition to working at least 40 hours each week. But this is how I feel works for me when teaching myself. You will definitely have a different routine that works for you.</p>
+
+						  				<h4>Other Tips</h4>
+						  				<ul class="list list--ul">
+						  					<li><strong>Take your time.</strong> It's better to take your time to really learn the fundamentals than to rush through only skimming the topics. It's worth it to spend months building a strong foundation of skills opposed to barely knowing enough to get by.</li>
+						  					<li><strong>Take a break if you feel frustrated.</strong> Coding is hard. Sometimes taking a break and doing something to clear your mind helps you return with a different mindset, making it easier to debug any issues or work through a problem.</li>
+						  					<li><strong>Learn and code in sprints.</strong> Don't try to learn as much as possible in a long peroid of time. To productively learn, stick to short bursts of focused learning or coding, anywhere from 30 minutes to 2 hours. Take a short break after each sprint to clear your mind, then continue onto the next sprint.</li>
+						  					<li><strong>Consistency + Frequency.</strong> Its important to consistently and frequently dedicate time to coding. As with anything in life, the more you practice, the better off you will be.</li>
+						  					<li><strong>Practice, practice, practice.</strong> When you learn something new, give it a try for yourself. Try to build something small and see how it works when you do it. The more you practice coding, the better you will be in the long run.</li>
+						  					<li><strong>Learn to know what to Google when you run into issues.</strong> Knowing what to specifically earch for when issues or bugs arise is a very important skill that can save you a lot of time and headaches.</li>
+						  					<li><strong>Immerse yourself in the world of development.</strong> If you want to seriously become a developer, surround yourself with all things development. Follow dev related accounts on social media, subscribe to dev related email newsletters, join developer meetups, I share a few helpful links below to get started, including some social media accounts I follow. In a world where development and engineering is constantly evolving, you have to constantly be learning new updates and trends.</li>
+						  					<li><strong>Contribute to open source projects.</strong> The best way to practice your skills as well as collaborate with other developers' code is to contribute to open source code on Github.</li>
+						  					<li><em>More to come ...</em></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-0-c">General Resoures</h3>
+						  				<p>Here are generally helpful resources. It may be helpful to bookmark some of these links to easily reference. More resources will be shared later on in this guide when applicable to the topic.</p>
+						  				
+						  				<h4>Quick References</h4>
+						  				<ul class="list list--ul">
+						  					<li><a href="https://andreasbm.github.io/web-skills/" target="_blank">Web Skills</a> - <em>a collection of links on practically every skill related to web and software development. I highly recommend bookmarking this page in your browser.</em></li>
+						  					<li><a href="https://developers.google.com/web/fundamentals" target="_blank">Web Development Fundamentals (Google Dev)</a></li>
+						  					<li><a href="https://frontendmasters.com/books/front-end-handbook/2019/" target="_blank">Front End Handbook 2019</a></li>
+						  					<li><a href="http://lawsofux.com/" target="_blank">Laws of UX</a></li>
+						  					<li><a href="https://dev.to/" target="_blank">DEV Community</a></li>
+						  					<li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+						  					<li><em>More to come ...</em></li>
+						  				</ul>
+
+						  				<h4>Videos</h4>
+						  				<ul class="list list--ul">
+						  					<li><a href="https://css-tricks.com/video-screencasts/169-how-to-think-like-a-front-end-developer/" target="_blank">How to Think Like a Front-End Developer</a></li>
+						  					<li><a href="https://www.youtube.com/watch?v=g2nMKzhkvxw" target="_blank">New vs Pro coder pt-1</a></li>
+						  					<li><a href="https://www.youtube.com/watch?v=5B587bQ-TNg" target="_blank">New vs Pro coder pt-2</a></li>
+						  					<li><em>More to come ...</em></li>
+						  				</ul>
+
+						  				<h4>Books</h4>
+						  				<ul class="list list--ul">
+						  					<li><a href="https://www.amazon.com/Programming-JavaScript-Applications-Architecture-Libraries-ebook/dp/B00LAHNPUE/" target="_blank">Programming JavaScript Applications: Robust Web Architecture with Node, HTML5, and Modern JS Libraries</a> by Eric Elliott</li>
+						  					<li><a href="https://www.amazon.com/JavaScript-Good-Parts-ebook-dp-B0026OR2ZY/dp/B0026OR2ZY/" target="_blank">JavaScript: The Good Parts</a> by Douglas Crockford</li>
+						  					<li><a href="https://www.amazon.com/Unicorn-Project-Developers-Disruption-Thriving-ebook/dp/B07QT9QR41" target="_blank">The Unicorn Project: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data</a> by Gene Kim</li>
+						  					<li><em>More to come ...</em></li>
+						  				</ul>
+
+						  				<h4>Articles</h4>
+						  				<ul class="list list--ul">
+						  					<li><a href="https://jamesclear.com/first-principles" target="_blank">First Principles: Elon Musk on the Power of Thinking for Yourself</a></li>
+						  					<li><a href="https://medium.com/the-post-grad-survival-guide/if-you-want-to-achieve-your-goals-10x-faster-you-need-to-stop-following-routines-cd3253e1908d" target="_blank">If You Want To Achieve Your Goals 10x Faster, You Need to Stop Following Routines</a></li>
+						  					<li>
+						  						<a href="https://levelup.gitconnected.com/the-2020-web-developer-roadmap-76503ddfb327" target="_blank">The 2020 Web Developer Roadmap</a>
+						  						<div><small>The roadmap is similar to this guide but with way more information and resources put together by a professional developer.</small></div>
+						  					</li>
+						  					<li><a href="https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design/" target="_blank">How to Learn Software Design and Architecture | The Full-stack Software Design & Architecture Map</a></li>
+						  					<li><a href="https://www.freecodecamp.org/news/lessons-learned-from-my-journey-as-a-self-taught-developer/" target="_blank">Lessons Learned from My Journey as a Self-Taught Developer</a></li>
+						  					<li><a href="https://medium.com/better-programming/7-habits-of-highly-effective-programmers-563ee3b63f33" target="_blank">7 Skills of Highly “Effective” Programmers</a></li>
+						  					<li><a href="https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/" target="_blank">Building a Scalable CSS Architecture With BEM and Utility Classes</a></li>
+						  					<li><em>More to come ...</em></li>
+						  				</ul>
+
+						  				<h4>Social Media</h4>
+						  				<p>Here are some links to social media accounts to follow that are helpful for web development and software engineering</p>
+				  						<h6>Reddit</h6>
+				  						<ul class="list list--ul">
+				  							<li><a href="https://www.reddit.com/r/HTML/" target="_blank">r/HTML</a></li>
+				  							<li><a href="https://www.reddit.com/r/css/" target="_blank">r/css</a></li>
+				  							<li><a href="https://www.reddit.com/r/Frontend/" target="_blank">r/Frontend</a></li>
+				  							<li><a href="https://www.reddit.com/r/javascript/" target="_blank">r/javascript</a></li>
+				  							<li><a href="https://www.reddit.com/r/learnjavascript/" target="_blank">r/learnjavascript</a></li>
+				  							<li><a href="https://www.reddit.com/r/webdev/" target="_blank">r/webdev</a></li>
+				  							<li><a href="https://www.reddit.com/r/Wordpress/" target="_blank">r/Wordpress</a></li>
+				  							<li><a href="https://www.reddit.com/r/node/" target="_blank">r/node</a></li>
+				  							<li><a href="https://www.reddit.com/r/expressjs/" target="_blank">r/expressjs</a></li>
+				  							<li><a href="https://www.reddit.com/r/reactjs/" target="_blank">r/reactjs</a></li>
+				  							<li><a href="https://www.reddit.com/r/learnprogramming/" target="_blank">r/learnprogramming</a></li>
+				  							<li><a href="https://www.reddit.com/r/eli5_programming/" target="_blank">r/eli5_programming</a></li>
+				  							<li><a href="https://www.reddit.com/r/SoftwareEngineering/" target="_blank">r/SoftwareEngineering</a></li>
+				  							<li><a href="https://www.reddit.com/r/softwaredevelopment/" target="_blank">r/softwaredevelopment</a></li>
+				  						</ul>
+
+				  						<h6>Instagram</h6>
+				  						<ul class="list list--ul">
+				  							<li><a href="https://www.instagram.com/jsnuggets/" target="_blank">@jsnuggets</a></li>
+				  							<li><a href="https://www.instagram.com/javascript.js/" target="_blank">@javascript.js</a></li>
+				  						</ul>
+
+				  						<h6>Twitter</h6>
+				  						<small>Most likely anything related to web development and software engineering has a Twitter account. I suggest following popular frameworks and libraries, any technology you use frequently, and any developers that have a large following.</small>
+				  						<ul class="list list--ul">
+				  							<li><em>More to come ...</em></li>
+				  						</ul>
+
+						  				<h3 id="nav-item-0-d">Courses</h3>
+						  				<p>Here's a list of courses I have either already taken, am currently taken, or plan on taking. I have put them in a suggested order on where to start. Most courses' topics may overlap, but it is helpful to get different perspectives. Most of the courses are on Udemy, which frequently has flash sales on courses as low at $10 per course. I recommend waiting for those flash sales, then purchasing multiple courses at once. </p>
+						  				<ol class="list list--ol">
+						  					<li>
+						  						<a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">The Web Developer Bootcamp</a> by Colt Steele | <em>Udemy</em>
+													<div><small>Note: This course is highly recommended. It covers everything from basic HTML and CSS to building full-stack applications at a beginner's level.It's really great to get a full picture of how web apps work and what it takes to become a developer.</small></div>
+						  					</li>
+						  					<li><a href="https://www.udemy.com/course/git-a-web-developer-job-mastering-the-modern-workflow/" target="_blank">Git a Web Developer Job: Mastering the Modern Workflow</a> by Brad Schiff | <em>Udemy</em></li>
+						  					<li><a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">The Complete JavaScript Course 2020: Build Real Projects!</a> by Jonas Schmedtmann | <em>Udemy</em></li>
+						  					<li><a href="https://www.udemy.com/course/javascript-es6-tutorial/" target="_blank">ES6 Javascript: The Complete Developer's Guide</a> by Stephen Grider | <em>Udemy</em></li>
+						  					<li>
+						  						<a href="https://www.udemy.com/course/become-a-wordpress-developer-php-javascript/" target="_blank">Become a WordPress Developer: Unlocking Power With Code</a> by Brad Schiff | <em>Udemy</em>
+						  						<div><small>Note: If you get to this point, you should have the skills to be a web developer. I recommend taking this course since most webiste use Wordpress. You also learn some PHP and other useful skills.</small></div>
+						  					</li>
+						  					<li><a href="https://www.udemy.com/course/the-complete-react-web-app-developer-course/" target="_blank">The Complete React Web App Developer Course</a> by Andrew Mead | <em>Udemy</em></li>
+						  					<li><a href="https://www.udemy.com/course/nodejs-api-masterclass/" target="_blank">Node.js API Masterclass With Express & MongoDB</a> by Brad Traversy | <em>Udemy</em></li>
+						  					<li><a href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/" target="_blank">JavaScript Algorithms and Data Structures Masterclass</a> by Colt Steele | <em>Udemy</em></li>
+						  					<li><a href="https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/" target="_blank">The Complete Junior to Senior Web Developer Roadmap (2020)</a> by Andrei Neagoie | <em>Udemy</em></li>
+						  				</ol>
+
+						  				<h6><em>Extra Courses</em></h6>
+						  				<ol class="list list--ol">
+						  					<li><a href="https://watchandcode.com/" target="_blank">Watch and Code®</a> by Gordon Zhu | <em>Watch and Code</em></li>
+						  					<li><a href="https://fullstackopen.com/en/#course-contents" target="_blank">Deep Dive Into Modern Web Development</a> | <em>Full Stack Open</em></li>
+						  					<li><a href="https://www.c0d3.com/curriculum" target="_blank">COD3</a> | <em>COD3</em></li>
+						  					<li><a href="https://www.udemy.com/course/microservices-with-node-js-and-react/" target="_blank">Microservices with Node JS and React</a> by Stephen Grider | <em>Udemy</em></li>
+						  					<li><a href="https://www.udemy.com/course/deno-the-complete-guide-zero-to-mastery/" target="_blank">Deno: The Complete Guide Zero to Mastery</a> by Andrei Neagoie, Adam Odziemkowski | <em>Udemy</em></li>
+						  				</ol>
+
+						  				<h6><em>Interactive Courses</em></h6>
+						  				<ul class="list list--ul">
+						  					<li><a href="https://www.freecodecamp.org/" target="_blank">Free Code Camp</a></li>
+						  					<li><a href="https://www.codecademy.com/catalog/all" target="_blank">Codecademy</a></li>
+						  				</ul>
+
+						  			</div>
+						  		</div>
+						  	</section>
+
+						  	<hr>
+
+						  	<section class="padding-y-xs">
+						  		<div class="container">
+						  			<p><em>The following sections provide more specific resources and project ideas to expand on topics covered in the above courses. Use these as supplements to the courses in order to strenghten your understanding.</em></p>
+						  		</div>
+						  	</section>
+
+						  	<hr>
+
+						  	<section class="padding-y-md">
+						  		<div class="container max-width-adaptive-sm">
+						  			<div class="text-component line-height-lg v-space-md">
+						  				<h2 id="nav-item-1" class="font-semibold text-underline">1. Fundamentals</h2>
+						  				
+						  				<h3 id="nav-item-1-a">HTML, CSS, JavaScript</h3>
+						  				<p>By far the most important topics to </p>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-1-b">Command Line Basics</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-1-c">Git and Github</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-1-d">Troubleshooting and Debugging</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  			</div>
+						  		</div>
+						  	</section>
+
+						  	<section class="padding-y-md">
+						  		<div class="container max-width-adaptive-sm">
+						  			<div class="text-component line-height-lg v-space-md">
+						  				<h2 id="nav-item-2" class="font-semibold text-underline">2. Front End Development</h2>
+						  				
+						  				<h3 id="nav-item-2-a">Start Thinking Algorithmically</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-2-b">Engineering Techniques</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-2-c">Intermediate HTML, CSS, and Javascript</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  			</div>
+						  		</div>
+						  	</section>
+
+						  	<section class="padding-y-md">
+						  		<div class="container max-width-adaptive-sm">
+						  			<div class="text-component line-height-lg v-space-md">
+						  				<h2 id="nav-item-3" class="font-semibold text-underline">3. Full Stack Development</h2>
+						  				<p>Advanced topics and basic backend.</p>
+						  				
+						  				<h3 id="nav-item-3-a">Algorithms</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-3-b">Advanced JavaScript and Engineering Concepts</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-3-c">Node.js and Express.js</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-3-d">Database Interaction</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-3-e">Authentication and Authorization</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-3-f">Agile Development</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-3-g">Open Source Code</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-3-h">Documentation Best Practices</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  			</div>
+						  		</div>
+						  	</section>
+
+						  	<section class="padding-y-md">
+						  		<div class="container max-width-adaptive-sm">
+						  			<div class="text-component line-height-lg v-space-md">
+						  				<h2 id="nav-item-4" class="font-semibold text-underline">4. Front End Frameworks</h2>
+						  				<p>Once you are compfortable with the fundamentals, move on to frameworks and libraries for rapid development.</p>
+						  				
+						  				<h3 id="nav-item-4-a">Intro to Frameworks</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-4-b">Package Managers and Build Tools</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-4-c">Data Structures and Design Patterns</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-4-d"> Front End Patterns</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-4-e">Typescript</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  			</div>
+						  		</div>
+						  	</section>
+
+						  	<section class="padding-y-md">
+						  		<div class="container max-width-adaptive-sm">
+						  			<div class="text-component line-height-lg v-space-md">
+						  				<h2 id="nav-item-5" class="font-semibold text-underline">5. APIs and Back End Development</h2>
+						  				<p>After learning enough to become a front end developer, learn the back end more in depth.</p>
+						  				
+						  				<h3 id="nav-item-5-a">Advanced Data Structures</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-5-b">Backend Libraries and Frameworks</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-5-c">REST APIs</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-5-d">Git Workflows</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-5-e">Advanced Debugging, Testing, and Documentation Techniques</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  			</div>
+						  		</div>
+						  	</section>
+
+						  	<section class="padding-y-md">
+						  		<div class="container max-width-adaptive-sm">
+						  			<div class="text-component line-height-lg v-space-md">
+						  				<h2 id="nav-item-6" class="font-semibold text-underline">6. Extra Learning</h2>
+						  				<p>Learn some of the more in demand skills as well as some cutting edge technologies to gain a leg up on the competition when applying to jobs.</p>
+						  				
+						  				<h3 id="nav-item-6-a">GraphQL</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-6-b">Deno.js</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-6-c">Docker and Kubernetes</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-6-d">AWS</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-6-e">Advanced Accessibility</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-6-f">Microservices</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-6-g">Data Visualization</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  				<h3 id="nav-item-6-h">Learn Another Language</h3>
+						  				<p><strong>Resources</strong></p>
+						  				<ul class="list list--ul">
+						  					<li><a href="" target="_blank"></a></li>
+						  				</ul>
+
+						  				<hr>
+
+						  			</div>
+						  		</div>
+						  	</section>
+
+						  </article>
+						</div>
+
+						<!-- end main content -->
+					</main>
+				</div>
+
+				<script src="assets/js/scripts.js"></script>
+		</body>
+</html>
