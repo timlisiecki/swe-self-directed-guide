@@ -76,13 +76,16 @@ gulp.task('clean', function() {
 });
 
 gulp.task('copy', function() {
-  return gulp.src([
-    'main/assets/images/',
-    'main/assets/css/style.css',
-    'main/assets/js/scripts.min.js',
-    'main/*.html'
-  ], {base: 'main/'})
-  .pipe(gulp.dest('docs/'));
+  return gulp
+    .src([
+        "main/assets/images/**/*",
+        "main/assets/css/style.css",
+        "main/assets/js/scripts.min.js",
+        "main/*.html",
+      ],
+      { base: "main/" }
+    )
+    .pipe(gulp.dest("docs/"));
 });
 
 gulp.task("build", gulp.series(["clean", "copy"]));
