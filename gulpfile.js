@@ -8,6 +8,7 @@ var cssvariables = require('postcss-css-variables');
 var calc = require('postcss-calc');  
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var clean  = require('gulp-clean');
 var uglify = require('gulp-uglify');
 
 // js file paths
@@ -68,3 +69,20 @@ gulp.task('watch', gulp.series(['browserSync', 'sass', 'scripts'], function () {
   gulp.watch('main/assets/css/**/*.scss', gulp.series(['sass']));
   gulp.watch(componentsJsPath, gulp.series(['scripts']));
 }));
+
+gulp.task('clean', function() {
+  return gulp.src('docs', {read: false, allowEmpty: true})
+    .pipe(clean());
+});
+
+gulp.task('copy', function() {
+  return gulp.src([
+    'main/assets/images/',
+    'main/assets/css/style.css',
+    'main/assets/js/scripts.min.js',
+    'main/*.html'
+  ], {base: 'main/'})
+  .pipe(gulp.dest('docs/'));
+});
+
+gulp.task("build", gulp.series(["clean", "copy"]));
