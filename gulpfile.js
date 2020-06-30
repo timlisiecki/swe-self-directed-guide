@@ -78,6 +78,8 @@ gulp.task('clean', function() {
 gulp.task('copy', function() {
   return gulp
     .src([
+        "main/favicon.ico",
+        "main/*.png",
         "main/assets/images/**/*",
         "main/assets/css/style.css",
         "main/assets/js/scripts.min.js",
